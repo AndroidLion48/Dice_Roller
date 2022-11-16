@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Udacity Dice Roller</string>
+    <string name="RollBtn">Roll</string>
+    <string name="dice_tv">1</string>
+</resources>
