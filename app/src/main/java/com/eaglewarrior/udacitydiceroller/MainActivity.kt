@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         rollbtn.setOnClickListener {
             rollDice()
         }
+        diceImage = findViewById(R.id.dice_Iv)
     }
 
     private fun rollDice() {
@@ -32,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Retrieves ImageView and sets the image to random result of drawableResource
-        val diceImage: ImageView = findViewById(R.id.dice_Iv)
         diceImage.setImageResource(drawableResource)
     }
 }
