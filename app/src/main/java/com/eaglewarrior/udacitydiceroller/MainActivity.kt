@@ -2,6 +2,7 @@ package com.eaglewarrior.udacitydiceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
@@ -29,5 +30,9 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
+
+        // Retrieves ImageView and sets the image to random result of drawableResource
+        val diceImage: ImageView = findViewById(R.id.dice_Iv)
+        diceImage.setImageResource(drawableResource)
     }
 }
